@@ -6,7 +6,7 @@ class Persona {
   }
 
   mostrarInfo() {
-    console.log(`ID: ${this.id}, Nombre: ${this.nombre}, Correo: ${this.correo}`);
+    console.log("ID:", this.id, "Nombre:", this.nombre, "Correo:", this.correo);
   }
 }
 
@@ -17,8 +17,7 @@ class Instructor extends Persona {
   }
 
   mostrarInfo() {
-    super.mostrarInfo();
-    console.log(`Especialidad: ${this.especialidad}`);
+    console.log("ID:", this.id, "Nombre:", this.nombre, "Correo:", this.correo, "Especialidad:", this.especialidad);
   }
 }
 
@@ -29,13 +28,13 @@ class Aprendiz extends Persona {
   }
 
   mostrarInfo() {
-    super.mostrarInfo();
-    console.log(`Puntaje ICFES: ${this.puntaje}`);
+    console.log("ID:", this.id, "Nombre:", this.nombre, "Correo:", this.correo, "Puntaje ICFES:", this.puntaje);
   }
 }
 
+
 const profe = new Instructor(1, "pacho", "pacho10@gmail.com", "software");
-const estudiante = new Aprendiz(2, "Daniel Mbappe","MBAPEREZ@GMAIL.com", 298);
+const estudiante = new Aprendiz(2, "Daniel Mbappe", "MBAPEREZ@GMAIL.com", 298);
 
 profe.mostrarInfo();
 estudiante.mostrarInfo();
